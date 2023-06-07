@@ -49,9 +49,11 @@ button.addEventListener("click", function() {
 });
 
 document.getElementById("copyButton").addEventListener("click", function() {
-  const textToCopy = "Text you want to copy"; // Replace with the actual text you want to copy
+  const textToCopy = document.getElementById("textToCopy").innerText;
   navigator.clipboard.writeText(textToCopy).then(function() {
+    alert("Text copied to clipboard!");
   }, function(error) {
     console.error("Error copying text: ", error);
   });
 });
+
