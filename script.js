@@ -47,3 +47,12 @@ button.addEventListener("click", function() {
 
   paragraph.textContent = shuffledString;
 });
+
+document.getElementById("copyButton").addEventListener("click", function() {
+  const textToCopy = "Text you want to copy"; // Replace with the actual text you want to copy
+  navigator.clipboard.writeText(textToCopy).then(function() {
+    alert("Text copied to clipboard!");
+  }, function(error) {
+    console.error("Error copying text: ", error);
+  });
+});
