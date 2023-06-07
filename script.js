@@ -49,7 +49,7 @@ button.addEventListener("click", function() {
 });
 
 document.getElementById("copyButton").addEventListener("click", function() {
-  const textToCopy = document.getElementById("textToCopy").innerText;
+  const textToCopy = document.getElementById("myParagraph").innerText;
   navigator.clipboard.writeText(textToCopy).then(function() {
     alert("Text copied to clipboard!");
   }, function(error) {
